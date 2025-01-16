@@ -1,7 +1,20 @@
 Update: 
 keras.utils.np_utils has been removed.
 
-Instead import like this:
-import keras import utils
+Previous version:
+from keras.utils.np_utils import to_categorical     (now commented in the code)
+.
+.
+.
+y_train = to_categorical(y_train, 10)
+y_test = to_categorical(y_test, 10)
 
-use utils.to_categorical instead of to_categorical
+
+Instead updated code is like this:
+
+import keras import utils
+.
+.
+.
+y_train = utils.to_categorical(y_train, 10)
+y_test = utils.to_categorical(y_test, 10)
